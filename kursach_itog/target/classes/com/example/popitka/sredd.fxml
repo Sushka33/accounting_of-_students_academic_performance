@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="250.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.popitka.Sredd">
+    <children>
+        <Text layoutX="45.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Математика:" />
+        <Text layoutX="43.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Белорусский:" />
+        <Text layoutX="40.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Информатика:" />
+        <Label fx:id="mlabel" layoutX="182.0" layoutY="56.0" prefHeight="17.0" prefWidth="21.0" text="Мрмам" />
+        <Label fx:id="blabel" layoutX="182.0" layoutY="100.0" prefHeight="17.0" prefWidth="41.0" text="qqq" />
+        <Label fx:id="ilabel" layoutX="182.0" layoutY="139.0" prefHeight="17.0" prefWidth="41.0" text="rrr" />
+    </children>
+</AnchorPane>

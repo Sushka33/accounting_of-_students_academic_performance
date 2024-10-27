@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import com.example.popitka.User?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.popitka.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+
+    <TableView fx:id="table" prefHeight="312.0" prefWidth="889.0">
+        <columns>
+            <TableColumn fx:id="spisok" editable="false" minWidth="0.0" prefWidth="128.0" resizable="false" text="Cписок учеников" >
+            <cellValueFactory><PropertyValueFactory property="spisok" />
+            </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="mathh" minWidth="9.0" prefWidth="130.0" text="математика" >
+                <cellValueFactory><PropertyValueFactory property="mathh" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="inform" prefWidth="98.0" text="информатика" >
+                <cellValueFactory><PropertyValueFactory property="inform" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="bel" prefWidth="149.0" text="белoрусcкий язык" >
+                <cellValueFactory><PropertyValueFactory property="bel" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+
+    <Text fill="#8cb913" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Фамилия" textAlignment="CENTER">
+      <font>
+         <Font name="Corbel" size="21.0" />
+      </font></Text>
+    <TextField fx:id="spisokinput" />
+    <Text fill="#3080d7" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Математика">
+      <font>
+         <Font name="Corbel" size="20.0" />
+      </font></Text>
+    <TextField fx:id="mathhinput" />
+    <Text fill="#c62a2a" layoutX="10.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Информатика" textAlignment="CENTER">
+      <font>
+         <Font name="Corbel" size="21.0" />
+      </font></Text>
+    <TextField fx:id="informinput" />
+    <Text fill="#c91ea4" fontSmoothingType="LCD" layoutX="10.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Белорусский язык" textAlignment="CENTER" wrappingWidth="200.435546875">
+      <font>
+         <Font name="Corbel" size="21.0" />
+      </font></Text>
+    <TextField fx:id="belinput" prefHeight="25.0" prefWidth="383.0" />
+      <cursor>
+         <Cursor fx:constant="E_RESIZE" />
+      </cursor>
+      <effect>
+         <ColorAdjust />
+      </effect>
+
+    <Button mnemonicParsing="false" onAction="#info" prefHeight="25.0" prefWidth="200.0" text="Вывод информации" textFill="#052916"/>
+    <Button mnemonicParsing="false" onAction="#sred" prefHeight="25.0" prefWidth="200.0" text="Рассчитать" textFill="#6495ED" />
+    <Button mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="200.0" text="Добавить" textFill="#71b54f" />
+    <Button mnemonicParsing="false" onAction="#nezach" prefHeight="25.0" prefWidth="200.0" text="список недопущенных" textFill="#2b0b02"/>
+    <Button mnemonicParsing="false" onAction="#ball" prefHeight="25.0" prefWidth="200.0" text="средний балл" textFill="#2b0b02"/>
+    <Button layoutX="420.0" layoutY="349.0" mnemonicParsing="false" onAction="#removeCustomer" text="Удалить" textFill="#dd0b0b" />
+
+
+   <cursor>
+      <Cursor fx:constant="MOVE" />
+   </cursor>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</VBox>

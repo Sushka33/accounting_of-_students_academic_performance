@@ -1,0 +1,86 @@
+@startuml
+class com.example.popitka.Main {
++ void start(Stage)
++ {static} void main(String[])
+}
+class com.example.popitka.Sredd {
+- Label blabel
+- Label ilabel
+- Label mlabel
++ void showSredBall(double,double,double)
+}
+class com.example.popitka.User {
+- int mathh
+- int inform
+- int bel
++ <<Create>> User(String,int,int,int)
++ <<Create>> User()
++ int getMathh()
++ int getInform()
++ int getBel()
++ void setMathh(int)
++ void setInform(int)
++ void setBel(int)
+}
+class com.example.popitka.HelloController {
+- VBox Vbox
++ TableView<User> table
+- TableColumn<User,Integer> bel
+- TableColumn<User,Integer> inform
+- TableColumn<User,Integer> mathh
+- TableColumn<User,String> spisok
+- TextField spisokinput
+- TextField mathhinput
+- TextField informinput
+- TextField belinput
+- UserData data
+~ void submit(ActionEvent)
+~ void removeCustomer(ActionEvent)
++ void initialize(URL,ResourceBundle)
++ void sred(ActionEvent)
+- void info(ActionEvent)
+- void nezach(ActionEvent)
+- void ball(ActionEvent)
+}
+class com.example.popitka.Nezach {
++ ListView<User> listview
++ void Shownezach(ObservableList)
+}
+class com.example.popitka.People {
++ String spisok
++ <<Create>> People()
++ String getSpisok()
++ String toString()
++ String setSpisok(String)
+}
+class com.example.popitka.UserData {
+- {static} String CUSTOMERS_FILE
+- {static} String CUSTOMER
+- {static} String SPISOK
+- {static} String MATHH
+- {static} String INFORM
+- {static} String BEL
+- ObservableList<User> customers
++ <<Create>> UserData()
++ ObservableList<User> getCustomers()
++ void addCustomer(User)
++ void deleteCustomer(User)
++ void loadCustomers()
++ void saveCustomers()
+- void saveCustomer(XMLEventWriter,XMLEventFactory,User)
+- void createNode(XMLEventWriter,String,String)
+}
+class com.example.popitka.Info {
+- Label blabel
+- Label flabel
+- Label ilabel
+- Label mlabel
+- User user
++ void showPersonDetails(User)
+}
+
+
+javafx.application.Application <|-- com.example.popitka.Main
+com.example.popitka.People <|-- com.example.popitka.User
+javafx.fxml.Initializable <|.. com.example.popitka.HelloController
+@enduml
